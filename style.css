@@ -1,0 +1,516 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  position: sticky;
+  top: 0;
+  background: #020617;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #38bdf8;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+.hero span {
+  color: #38bdf8;
+}
+
+.hero-btns {
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 12px 30px;
+  background: #38bdf8;
+  color: black;
+  text-decoration: none;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+}
+
+.section {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.light {
+  background: #020617;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.card {
+  padding: 30px;
+  background: #020617;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+.form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.form input, .form select, .form button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+}
+
+.form button {
+  background: #38bdf8;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+}
+.logo-animated {
+  width: 80px;
+  animation: zoomIn 1s ease-out, floatLogo 3s infinite ease-in-out;
+  filter: drop-shadow(0 0 12px #38bdf8);
+}
+
+@keyframes floatLogo {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.hero-title {
+  font-size: 42px;
+  animation: slideDown 1s ease-out forwards;
+}
+
+.hero-subtitle {
+  margin-top: 15px;
+  font-size: 18px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.hero-btns {
+  margin-top: 35px;
+  animation: popUp 1.2s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.trust {
+  background: #020617;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.trust-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.trust-card {
+  background: #0f172a;
+  padding: 25px;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.trust-card:hover {
+  transform: translateY(-8px);
+}
+
+.trust-card h3 {
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat span {
+  font-size: 40px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.testimonial-grid.horizontal {
+  display: flex;
+  gap: 32px;              /* Decent spacing between cards */
+  overflow-x: auto;
+  padding: 30px 15px;
+  scroll-snap-type: x mandatory;
+}
+
+
+.testimonial-grid.horizontal::-webkit-scrollbar {
+  height: 6px;
+}
+
+.testimonial-grid.horizontal::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 10px;
+}
+
+.testimonial-card {
+  min-width: 280px;
+  max-width: 320px;
+  background: #020617;
+  padding: 28px 26px;
+  border-radius: 22px;              /* Curvy edges */
+  border: 1.5px solid rgba(56,189,248,0.4);  /* Decent border */
+  box-shadow: 0 10px 25px rgba(2,6,23,0.6);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: #38bdf8;
+}
+
+
+
+.enroll-hint {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.enroll-hint span {
+  width: 10px;
+  height: 10px;
+  background: #38bdf8;
+  border-radius: 50%;
+  opacity: 0;
+  animation: blink 1.5s infinite;
+}
+
+.enroll-hint span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.enroll-hint span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-6px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   COMMON ARROW ANIMATION
+   ========================= */
+@keyframes arrowFlow {
+  0% {
+    transform: translateX(0);
+    opacity: 0.3;
+  }
+  40% {
+    transform: translateX(6px);
+    opacity: 1;
+  }
+  70% {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0.3;
+  }
+}
+
+/* =========================
+   TEACHER SECTION
+   ========================= */
+.teacher-section {
+  text-align: center;
+}
+
+.teacher-section .section-title {
+  margin-bottom: 35px;
+}
+
+.teacher-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Teacher Button */
+.faculty-btn {
+  position: relative;
+  padding: 14px 38px;        /* 🔥 PERFECT dimension */
+  font-size: 16px;
+  border-radius: 40px;
+  background: transparent;
+  color: #38bdf8;
+  border: 2px solid #38bdf8;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+/* Teacher Arrow */
+.faculty-btn::after {
+  content: "→";
+  margin-left: 8px;
+  display: inline-block;
+  animation: arrowFlow 1.6s ease-in-out infinite;
+  opacity: 0.8;
+  text-shadow: 0 0 8px rgba(56,189,248,0.8);
+}
+
+/* =========================
+   STUDENT SECTION
+   ========================= */
+.student-section {
+  text-align: center;
+}
+
+.student-section .section-title {
+  margin-bottom: 35px;
+}
+
+.student-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Student Button (SAME STYLE AS TEACHER) */
+.student-btn {
+  position: relative;
+  padding: 14px 38px;        /* 🔥 EXACT same dimension */
+  font-size: 16px;
+  border-radius: 40px;
+  background: transparent;
+  color: #38bdf8;
+  border: 2px solid #38bdf8;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+/* Student Arrow */
+.student-btn::after {
+  content: "→";
+  margin-left: 8px;
+  display: inline-block;
+  animation: arrowFlow 1.6s ease-in-out infinite;
+  opacity: 0.8;
+  text-shadow: 0 0 8px rgba(56,189,248,0.8);
+}
+
+/* =========================
+   NAVBAR – SIMPLE & SOLID
+   ========================= */
+
+.navbar {
+  width: 100%;
+  background: #020617;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 28px;
+}
+
+/* LEFT GROUP */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 48px;           /* 🔥 logo + nav spacing */
+}
+
+/* LOGO */
+.logo img {
+  width: 58px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 17px;
+  font-weight: 600;    /* 🔥 thoda strong */
+  padding: 6px 2px;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+
+
+/* =========================
+   COURSES PAGE
+   ========================= */
+
+.courses-page {
+  text-align: center;
+}
+
+.section-subtitle {
+  max-width: 700px;
+  margin: 10px auto 50px;
+  color: #cbd5f5;
+  font-size: 16px;
+}
+
+/* Grid */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* Card */
+.course-card {
+  background: #020617;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+/* Image */
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Content */
+.course-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.course-content h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.course-content p {
+  font-size: 14.5px;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
